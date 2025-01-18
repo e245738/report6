@@ -1,18 +1,8 @@
-## Getting Started
+ブラックジャック（概要）
+トランプとして4種類のスートを用意して52枚のカードを作る。
+    
+ディーラーに１枚配り、表示する。自分に２枚配り、合計を表示する。追加でカードを引くか、メッ  セージを表示する。
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+表示して引く場合、21を超えたらプレイヤーの敗北になる。引かない場合ディーラーが17以上になるまでカードを引く。ディーラーが21を超える場合も敗北になる。
+    
+ディーラーと自分の合計を比較して、結果判定を行い合計が21に近い方を勝ちとする。ディーラーと自分の合計が同じだと引き分けとなる。
