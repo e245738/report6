@@ -1,6 +1,4 @@
 package jp.ac.uryukyu.ie.e245711_e245738;
-import java.util.ArrayList;
-import java.util.Collections;
 public class BlackJack {
     /*
     ブラックジャック（概要）

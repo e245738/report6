@@ -5,7 +5,7 @@ import java.util.List;
 
 
 public class Deck {
-    public List<Card> cards;
+    private List<Card> cards;
 
     public Deck() {
         cards = new ArrayList<>();
@@ -28,8 +28,5 @@ public class Deck {
         return cards.remove(0); // 先頭のカードを引く
     }
 
-    public int size() {
-        return cards.size();
-    }
 }
-   
+
