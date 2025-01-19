@@ -1,15 +1,25 @@
 package jp.ac.uryukyu.ie.e245711_e245738;
 import java.util.Scanner;
 /**
+ * このクラスはe245738、幸地優が担当
  * ターンを表すクラス。
  * プレイヤーのターンならH（一枚引く）かS（ターン終了）を選択することができる。
  * ディーラーのターンなら手札の合計が17より小さい時17以上になるまでカードを引く。
  * それぞれバースト（21を超える）したら負けとなる。
  */
 public class Turn {
-    Scanner scanner = new Scanner(System.in);//
+    //ユーザーが入力するため
+    Scanner scanner = new Scanner(System.in);
 
     // プレイヤーのターン
+    /**
+     * プレイヤーターンメソッド
+     * プレイヤーのターン実行
+     * 
+     * @param player　プレイヤーオブジェクト
+     * @param deck  　デッキオブジェクト
+     * @return 　　　　プレイヤーがバーストした場合はfalse、それ以外はtrueを返します。  
+     */    
     public boolean playerTurn(Player player, Deck deck) {
         while (true) {
             System.out.println(player.getName() + "、カードを引きますか？");
@@ -37,6 +47,13 @@ public class Turn {
     }
 
     // ディーラーのターン
+    /**
+     * ディーラーターンメソッド
+     * ディーラーのターン
+     * 
+     * @param dealer　プレイヤーオブジェクト
+     * @param deck 　 デッキオブジェクト
+     */
     public void dealerTurn(Player dealer, Deck deck) {
         System.out.println(dealer.getName() + "のターンです。");
         while (dealer.calculateHandValue() < 17) { // 手札の合計が17未満の場合カードを引く
