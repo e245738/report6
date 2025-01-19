@@ -14,9 +14,9 @@ public class Main {
         dealer.addCard(deck.draw());
         dealer.addCard(deck.draw());
         
-        System.out.println(player.getName() + "の手札");
+        System.out.println(player);
         player.showHand();
-        System.out.println(dealer.getName() + "の手札:");
+        System.out.println(dealer);
         dealer.showHand();
         
         turn.playerTurn(player, deck);
@@ -26,18 +26,25 @@ public class Main {
         }
 
         System.out.println("最終結果:");
-        System.out.println(player.getName() + "の手札:");
+        System.out.println(player);
         player.showHand();
-        System.out.println(dealer.getName() + "の手札:");
+        System.out.println(dealer);
         dealer.showHand();
         
-        if (dealer.calculateHandValue() > 21 || player.calculateHandValue() > dealer.calculateHandValue()) {
-            System.out.println("プレイヤーの勝ちです！");
-        } else if (player.calculateHandValue() < dealer.calculateHandValue()) {
-            System.out.println("プレイヤーの負けです！");
-        } else {
-            System.out.println("引き分けです！");
+        if (player.isBusted()) {
+            System.out.println("あなたの手札がバーストしました！ ディーラーの勝ちです。");
+        } 
+        else if (dealer.isBusted()) {
+            System.out.println("ディーラーの手札がバーストしました！ あなたの勝ちです！");
+        } 
+        else if (player.calculateHandValue() > dealer.calculateHandValue()) {
+            System.out.println("あなたの勝ちです！");
+        } 
+        else if (player.calculateHandValue() < dealer.calculateHandValue()) {
+            System.out.println("ディーラーの勝ちです！");
+        } 
+        else {
+            System.out.println("引き分けです");
         }
-
     }
 }
