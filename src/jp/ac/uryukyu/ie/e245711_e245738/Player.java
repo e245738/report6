@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Player{
     private String name;
     private List<Card> hand;
-
+    
     public Player(String name){
         this.name = name;
         this.hand = new ArrayList<>();
@@ -57,6 +57,4 @@ public class Player{
     public String toString() {
         return name + "の手札: " + hand + " (合計: " + calculateHandValue() + ")";
     }
-
-
 }
