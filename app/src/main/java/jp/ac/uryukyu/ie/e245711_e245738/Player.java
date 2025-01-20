@@ -2,7 +2,7 @@ package jp.ac.uryukyu.ie.e245711_e245738;
 import java.util.List;
 import java.util.ArrayList;
 /**
- * ゲームのプレイヤーを表現するクラス。
+ * ゲームのプレイヤーを表現するクラス。(このクラスはe245711D　知花昴担当）
  * プレイヤーは名前と手札を持ち、手札の管理やスコア計算を行います。
  */
 public class Player{
@@ -62,21 +62,33 @@ public class Player{
     }
     /**
      * 現在の手札を取得します。
-     * 
      * @return プレイヤーの手札（List形式）
      */
     public List<Card> getHand() {
         return hand;
     }
-
+    
+     /**
+     * プレイヤーの名前を取得します。
+     * @return プレイヤーの名前
+     */
     public String getName() {
         return name;
     }
-
+    
+    /**
+     * プレイヤーがバストしているかを判定します。
+     * @return 手札の合計値が21を超える場合はtrue、それ以外はfalse
+     */
     public boolean isBusted() {
         return calculateHandValue() > 21;
     }
-
+    
+    /**
+     * プレイヤーの状態を文字列形式で返します。
+     * 名前、手札、および手札の合計値を含む情報を提供します。
+     * @return プレイヤーの状態を表す文字列
+     */
     @Override
     public String toString() {
         return name + "の手札: " + hand + " (合計: " + calculateHandValue() + ")";

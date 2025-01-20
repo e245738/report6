@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 /**
- * トランプのデッキを表すクラス
+ * トランプのデッキを表すクラス(このクラスはe245711D　知花昴担当）
  * ５２枚のカードを生成し、シャッフルやカードを引く機能がある。
  */
 

@@ -1,4 +1,6 @@
-package jp.ac.uryukyu.ie.e245711_e245738;
+import jp.ac.uryukyu.ie.e245711_e245738.Deck;
+import jp.ac.uryukyu.ie.e245711_e245738.Player;
+import jp.ac.uryukyu.ie.e245711_e245738.Turn;
 
 /**
  * このクラスかe245738、幸地優が担当
